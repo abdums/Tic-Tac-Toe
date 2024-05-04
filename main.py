@@ -35,8 +35,27 @@ def next_turn(row, column):
                 label.config(text=("Tie!"))
                 
 def check_winner():
-    pass
+    
+    for row in range(3):
+        if buttons[row][0]['text'] == buttons[row][1]['text'] == button[row][2]['text'] !="":
+            return True
 
+    for column in range(3):
+        if buttons[column][0]['text'] == buttons[column][1]['text'] == button[column][2]['text'] !="":
+            return True
+        
+    if buttons[0][0]['text'] == buttons[1][1]['text'] == buttons [2][2]['text'] != "":
+        return True
+        
+    elif buttons[0][2]['text'] == buttons[1][1]['text'] == buttons [2][0]['text'] != "":
+        return True
+    
+    elif empty_spaces() is False:
+        return "Tie"
+
+    else:
+        return False
+        
 def empty_spaces():
     pass
 
@@ -68,8 +87,8 @@ frame.pack()
 
 for row in range(3):
     for column in range(3):
-        buttons[row][column] = Button(frame, text="",font=('consolas',40),width=5, height=2,
-                                     command= lambda row=row, column=column: next_turn(row, column))
+        buttons[row][column] = Button(frame, text="",font=('consolas',40), width=5, height=2,
+                                      command= lambda row=row, column=column: next_turn(row,column))
         buttons[row][column].grid(row=row,column=column)
 
 window.mainloop()
