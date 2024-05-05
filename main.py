@@ -37,11 +37,11 @@ def next_turn(row, column):
 def check_winner():
     
     for row in range(3):
-        if buttons[row][0]['text'] == buttons[row][1]['text'] == button[row][2]['text'] !="":
+        if buttons[row][0]['text'] == buttons[row][1]['text'] == buttons[row][2]['text'] !="":
             return True
 
     for column in range(3):
-        if buttons[column][0]['text'] == buttons[column][1]['text'] == button[column][2]['text'] !="":
+        if buttons[column][0]['text'] == buttons[column][1]['text'] == buttons[column][2]['text'] !="":
             return True
         
     if buttons[0][0]['text'] == buttons[1][1]['text'] == buttons [2][2]['text'] != "":
