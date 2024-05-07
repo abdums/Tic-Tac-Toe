@@ -1,6 +1,8 @@
 from tkinter import *
 import random
 
+
+#Game logic functions
 def next_turn(row, column):
     
     global player
@@ -96,6 +98,9 @@ def new_game():
     for row in range(3):
         for column in range(3):
             buttons[row][column].config(text="",bg="#F0F0F0")
+
+######################################### Functions Declarations End ##################################################
+
 
 # Initialising the Tkinter window
 window= Tk()
