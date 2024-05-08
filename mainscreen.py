@@ -1,6 +1,7 @@
 from tkinter import *
 from tkinter import messagebox
 import random
+import onevsone
 
 def start_game(option):
     if option == "1v1":
