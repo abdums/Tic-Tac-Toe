@@ -18,8 +18,30 @@ def start_game(option):
         window.quit()
 
 def start_1v1_game():
-    # Put 1v1 game logic here
-    pass
+    # Initialize players and buttons within the 1v1 game function
+    players = ["x", "o"]
+    player = random.choice(onevsone.players)
+    buttons = [
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0]
+    ]
+
+    # Creating game widgets
+    label = Label(text=player + " turn", font=('consolas', 40))
+    label.pack(side="top")
+
+    reset_button = Button(text="restart", font=('consolas', 20), command=onevsone.new_game)
+    reset_button.pack(side="top")
+
+    frame = Frame(onevsone.window)
+    frame.pack()
+
+    for row in range(3):
+        for column in range(3):
+            buttons[row][column] = Button(frame, text="", font=('consolas', 40), width=5, height=2,
+                                           command=lambda row=row, column=column: onevsone.next_turn(row, column))
+            buttons[row][column].grid(row=row, column=column)
 
 def start_1vComputer_game():
     # Put 1vComputer game logic here
