@@ -5,7 +5,8 @@ import onevsone
 
 def start_game(option):
     if option == "1v1":
-        # Start 1v1 game
+        # Hide the main menu and start the 1v1 game
+        main_menu_frame.pack_forget()
         start_1v1_game()
     elif option == "1vComputer":
         # Start 1vComputer game
@@ -28,10 +29,10 @@ def start_1v1_game():
     ]
 
     # Creating game widgets
-    label = Label(text=player + " turn", font=('consolas', 40))
+    label = Label(onevsone.window, text=player + " turn", font=('consolas', 40))
     label.pack(side="top")
 
-    reset_button = Button(text="restart", font=('consolas', 20), command=onevsone.new_game)
+    reset_button = Button(onevsone.window, text="restart", font=('consolas', 20), command=onevsone.new_game)
     reset_button.pack(side="top")
 
     frame = Frame(onevsone.window)
@@ -57,7 +58,6 @@ window.title("Tic-Tac-Toe")
 
 # Main menu frame
 main_menu_frame = Frame(window)
-main_menu_frame.pack()
 
 # Main menu options
 menu_options = ["1v1", "1vComputer", "Instructions", "Quit"]
@@ -67,6 +67,9 @@ for option in menu_options:
     button = Button(main_menu_frame, text=option, font=('consolas', 20), width=20,
                     command=lambda o=option: start_game(o))
     button.pack(pady=5)
+
+# Pack the main menu frame
+main_menu_frame.pack()
 
 # Start the main event loop
 window.mainloop()
