@@ -5,8 +5,7 @@ import onevsone
 
 def start_game(option):
     if option == "1v1":
-        # Hide the main menu and start the 1v1 game
-        main_menu_frame.pack_forget()
+        # Start 1v1 game
         start_1v1_game()
     elif option == "1vComputer":
         # Start 1vComputer game
@@ -19,6 +18,9 @@ def start_game(option):
         window.quit()
 
 def start_1v1_game():
+    # Hide the main menu
+    main_menu_frame.pack_forget()
+
     # Initialize players and buttons within the 1v1 game function
     players = ["x", "o"]
     player = random.choice(onevsone.players)
