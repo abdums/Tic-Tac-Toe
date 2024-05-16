@@ -1,10 +1,7 @@
 from tkinter import *
 
 # Variables for game setup
-
-# player human player and computer
 players = ["El Humangus", "El Computador"]
-# Symbols representing the player
 xo = ["x", "o"]
 player = players[0]  # Ensure the human player starts first
 buttons = [
@@ -14,8 +11,7 @@ buttons = [
 ]
 label = None
 
-# Game logic Functions
-
+# Game logic functions
 def next_turn(row, column):
     global player
 
@@ -114,18 +110,18 @@ def minimax(board, is_maximizing):
             best_score = min(score, best_score)
         return best_score
 
-# Game Bone structure
+# Game structure
 def main():
     global label
-    # Initialising the Tkinter window
+    # Initialize the Tkinter window
     window = Tk()
     window.title("Tic-Tac-Toe")
 
-    # Creating game widgets
-    label = Label(text=player + "'s turn", font=('consolas', 40))
+    # Create game widgets
+    label = Label(window, text=player + "'s turn", font=('consolas', 40))
     label.pack(side="top")
 
-    reset_button = Button(text="restart", font=('consolas', 20), command=new_game)
+    reset_button = Button(window, text="restart", font=('consolas', 20), command=new_game)
     reset_button.pack(side="top")
 
     frame = Frame(window)
@@ -137,9 +133,8 @@ def main():
                                            command=lambda row=row, column=column: next_turn(row, column))
             buttons[row][column].grid(row=row, column=column)
 
-    # Return label so it can be accessed outside of main()
-    return label
+    # Start the main event loop for the game window
+    window.mainloop()
 
 if __name__ == '__main__':
-    label = main()  # Capture the label returned by main()
-    label.mainloop()  # Start the main event loop for the label widget
+    main()  # Start the Tic Tac Toe game
