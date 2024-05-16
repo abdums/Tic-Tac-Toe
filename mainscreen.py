@@ -3,6 +3,7 @@ from tkinter import *
 from tkinter import messagebox
 import random
 import onevsone
+import onevsthecomp
 
 def start_game(option):
     if option == "1v1":
@@ -24,8 +25,7 @@ def start_1v1_game():
 
 
 def start_1vComputer_game():
-    # Put 1vComputer game logic here
-    pass
+    onevsthecomp.main()
 
 def show_instructions():
     # Show instructions in a messagebox
