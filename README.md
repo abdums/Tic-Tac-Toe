@@ -17,8 +17,8 @@ This Python game allows you to play Tic Tac Toe either against a friend or again
 ### **Terminal**
 
 1. Make sure mainscreen.py is present in your directory. You can verify this by running the ls command in your terminal.
-2. Execute the game by running the following command:
-   python mainscreen.py
+2. Execute the game by running the following command:<br>
+   > python mainscreen.py
 
 ## **Enjoy the Game!**
 
