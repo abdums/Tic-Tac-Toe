@@ -81,10 +81,10 @@ def main():
     window.title("Tic-Tac-Toe")
 
     # Creating game widgets
-    label = Label(text=player + " turn", font=('consolas', 40))
+    label = Label(window, text=player + " turn", font=('consolas', 40))
     label.pack(side="top")
 
-    reset_button = Button(text="restart", font=('consolas', 20), command=new_game)
+    reset_button = Button(window, text="restart", font=('consolas', 20), command=new_game)
     reset_button.pack(side="top")
 
     frame = Frame(window)
@@ -96,9 +96,8 @@ def main():
                                            command=lambda row=row, column=column: next_turn(row, column))
             buttons[row][column].grid(row=row, column=column)
 
-    # Return label so it can be accessed outside of main()
-    return label
+    # Start the main event loop for the game window
+    window.mainloop()
 
 if __name__ == '__main__':
-    label = main()  # Capture the label returned by main()
-    label.mainloop()  # Start the main event loop for the label widget
+    main()  # Start the Tic Tac Toe game
