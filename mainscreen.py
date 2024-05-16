@@ -29,7 +29,7 @@ def start_1vComputer_game():
 
 def show_instructions():
     # Show instructions in a messagebox
-    messagebox.showinfo("Instructions", "To be established")
+    messagebox.showinfo("Instructions", "1v1: you can enjoy playing with your friends. \n \n 1vComp: The computer will be playing against you using the minimax algorithm.\n \n Note:  But if thou seekest truly jolly amusement and a hearty challenge whilst playing against yon mechanical contraption, endeavor to achieve a draw with the infernal device!😁")
 
 # Initialize the Tkinter window
 window = Tk()
