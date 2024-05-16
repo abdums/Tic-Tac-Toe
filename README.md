@@ -12,13 +12,13 @@ This Python game allows you to play Tic Tac Toe either against a friend or again
 
 ### **Visual Studio Code (VSCode)**
 
-Press the "Run Python Code" button in VSCode.
+1. Press the "Run Python Code" button in VSCode.
 
 ### **Terminal**
 
-Make sure mainscreen.py is present in your directory. You can verify this by running the ls command in your terminal.
-Execute the game by running the following command:
-python mainscreen.py
+1. Make sure mainscreen.py is present in your directory. You can verify this by running the ls command in your terminal.
+2. Execute the game by running the following command:
+   python mainscreen.py
 
 ## **Enjoy the Game!**
 
