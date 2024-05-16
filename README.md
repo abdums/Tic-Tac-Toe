@@ -1,3 +1,25 @@
-This is a python game where you can select if you wanna play with your friend or the computer which uses the minimax algorithm to make it's decisions.
+# **Tic Tac Toe Python Game**
 
-To my surprise the game is most challenging and fun when you are trying to tie with the computer ;), what a funny fun side effect.
+This Python game allows you to play Tic Tac Toe either against a friend or against the computer, which employs the minimax algorithm to make its decisions.
+
+## **Features**
+
+- Choose between playing with a friend or against the computer.
+- The computer AI utilizes the minimax algorithm, providing a challenging opponent.
+- Surprisingly, the game is most challenging and fun when attempting to achieve a tie with the computer!
+
+## **How to Play**
+
+### **Visual Studio Code (VSCode)**
+
+Press the "Run Python Code" button in VSCode.
+
+### **Terminal**
+
+Make sure mainscreen.py is present in your directory. You can verify this by running the ls command in your terminal.
+Execute the game by running the following command:
+python mainscreen.py
+
+## **Enjoy the Game!**
+
+Have fun playing Tic Tac Toe! Whether you're challenging a friend or testing your skills against the computer, may you experience the thrill of victory or the satisfaction of a well-earned tie.
